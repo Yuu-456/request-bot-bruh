@@ -319,9 +319,6 @@ def main():
     dispatcher.add_handler(CommandHandler('pendingrequests', show_requests_count))
     dispatcher.add_handler(CommandHandler('notes', show_faqs))
     dispatcher.add_handler(CommandHandler('status', status))
-    dispatcher.add_handler(CommandHandler('kick', kick))
-    dispatcher.add_handler(CommandHandler('mute', mute))
-    
     dispatcher.add_handler(CallbackQueryHandler(callback_query_handler))
 
     unknown_handler = MessageHandler(Filters.command, unknown)
